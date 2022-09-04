@@ -8,7 +8,9 @@
          - result:  A list of dictionaries of each pill in image with the following keys:
                                                                                         'pill_image': image of each pill
                                                                                         'drugname': drugname of each pill
-                                                                                        'id': mapping of each pill
+                                                                                        'id': mapping of each pill 
+
+                                                                                        
 '''
 import os
 import cv2
