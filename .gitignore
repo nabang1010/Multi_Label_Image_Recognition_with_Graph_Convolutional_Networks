@@ -130,3 +130,5 @@ dmypy.json
 
 
 data/public_train
+data
+checkpoint
