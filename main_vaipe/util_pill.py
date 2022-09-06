@@ -288,17 +288,9 @@ class AveragePrecisionMeter(object):
         CF1 = (2 * CP * CR) / (CP + CR)
         return OP, OR, OF1, CP, CR, CF1
 
-def gen_A(num_classes, t, adj_file):
+def gen_A(adj_file):
     import pickle
-    result = pickle.load(open(adj_file, 'rb'))
-    _adj = result['adj']
-    _nums = result['nums']
-    _nums = _nums[:, np.newaxis]
-    _adj = _adj / _nums
-    _adj[_adj < t] = 0
-    _adj[_adj >= t] = 1
-    _adj = _adj * 0.25 / (_adj.sum(0, keepdims=True) + 1e-6)
-    _adj = _adj + np.identity(num_classes, np.int)
+    _adj = pickle.load(open(adj_file, 'rb'))
     return _adj
 
 def      gen_adj(A):
