@@ -148,10 +148,6 @@ class Pill_Dataset(Dataset):
         # code nhầm nên vẫn ra 107 chiều, hề , nhưng ko sao qua lớp FC chắc ok 
 
 
-        
-
-
-
 
 
     

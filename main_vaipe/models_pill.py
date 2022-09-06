@@ -43,7 +43,7 @@ class GraphConvolution(nn.Module):
 
 
 class GCNResnet_pill(nn.Module):
-    def __init__(self, num_classes, in_channel=300, adj_file=None, t=0):
+    def __init__(self, num_classes, in_channel=768, adj_file=None, t=0):
         super(GCNResnet_pill, self).__init__()
         self.features = nn.Sequential(
             nn.Linear(107, num_classes),
